@@ -13,6 +13,7 @@ export const POST = auth(async (...request: any) => {
       }
     )
   }
+
   await dbConnect()
   const order = await OrderModel.findById(params.id)
   if (order) {
@@ -44,4 +45,4 @@ export const POST = auth(async (...request: any) => {
       }
     )
   }
-})
+}) as any

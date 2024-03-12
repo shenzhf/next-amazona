@@ -58,7 +58,7 @@ export const POST = auth(async (req: any) => {
       }
     )
   }
-})
+}) as any
 
 const calcPrices = (orderItems: OrderItem[]) => {
   // Calculate the items price
